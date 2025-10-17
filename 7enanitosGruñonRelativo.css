@@ -1,0 +1,23 @@
+body {
+  width: 1280px;
+  height: 800px;
+  border: 10px solid brown;
+  box-sizing: border-box;
+    /* Espacio útil: 1260px (1280px de width - 2x10px de border) de ancho y 780px (800px de height - 2x10px de border) de alto */
+}
+
+/* Todas las camas */
+.cama {
+  border: 2px solid black; 
+  width: 100px; /* No sirve para los span ya que al ser elementos en linea ocupan lo que ocupe el contenido que tengan */
+  height: 300px; /* No sirve para los span ya que al ser elementos en linea ocupan lo que ocupe el contenido que tengan */
+  display: inline-block; /* Ahora si que se aplicarán el width y el height a los elementos span ya que se les cambia el display inline (vienen asi por defecto) por el display inline-block */
+  padding: 2px 10px 0px; /* Espacio entre el colchon y su borde (10px a izquierda y derecha, 2px la parte superior y 0px en la inferior) */
+  margin: 40px 20px; /* Separacion entre camas (40px arriba y abajo y 20px derecha e izquierda)*/
+} 
+
+.gruñon {
+  position: relative;
+  top: 200px;
+  left: 900px;
+}

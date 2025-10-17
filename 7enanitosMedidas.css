@@ -1,0 +1,49 @@
+body {
+  width: 1280px;
+  height: 800px;
+  border: 10px solid brown;
+  box-sizing: border-box;
+    /* Espacio útil: 1260px (1280px de width - 2x10px de border) de ancho y 780px (800px de height - 2x10px de border) de alto */
+}
+
+/* Todas las camas */
+.cama {
+  border: 2px solid black; 
+  width: 100px; /* No sirve para los span ya que al ser elementos en linea ocupan lo que ocupe el contenido que tengan */
+  height: 300px; /* No sirve para los span ya que al ser elementos en linea ocupan lo que ocupe el contenido que tengan */
+  display: inline-block; /* Ahora si que se aplicarán el width y el height a los elementos span ya que se les cambia el display inline (vienen asi por defecto) por el display inline-block */
+  padding: 2px 10px 0px; /* Espacio entre el colchon y su borde (10px a izquierda y derecha, 2px la parte superior y 0px en la inferior) */
+  margin: 40px 20px; /* Separacion entre camas (40px arriba y abajo y 20px derecha e izquierda)*/
+} 
+
+.grupo-linea {
+    position: relative;
+    /*width: 800px;  Prueba de que gruñon al ser absoluto con respecto a este div, cambia de posicion al cambiar el ancho de este div */
+}
+
+.gruñon {
+    position: absolute;
+    right: 20px;
+    top: 200px;
+}
+
+.cama::first-letter {
+  font-size: 20px;   /* Agrandar la letra */
+  color: #1e00ff;     /* Color diferente */
+  font-weight: bold;  /* Negrita */
+}
+
+.grupo-linea .cama:nth-child(even) {
+  background-color: #F1FEE3;
+}
+
+.gruñon {
+  background-color: #D6234A !important;
+  color: white;
+}
+
+.grupo-linea {
+    width: 656px; /* ((20px de margin)x2 + (2px de border)x2 + (10px de padding)x2 + 100px de anchura de content)x4 que son los hijos q hay */
+    border: 1px solid black;
+    padding: 15px;
+} /* Ocupa 656px de content y 658px en total en anchura (1px extra de border por cada lado) sin contar el padding (688px contandolo) */
